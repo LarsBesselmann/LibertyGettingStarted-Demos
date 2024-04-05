@@ -24,9 +24,7 @@ In the document, you will find some hints how to use the asset for customer demo
 
 ## 2. Accessing the environment
 
-If you are doing this lab as part of an instructor led workshop (virtual or face to face), an environment has already been provisioned for you. The instructor will provide the details for accessing the lab environment.
-
-Otherwise, you will need to reserve an environment for the lab. You can obtain one here. Follow the on-screen instructions for the “**Reserve now**” option.
+To reserve an environment for the demo, you can obtain one here. Go to the tab **environment**, select the environment and follow the on-screen instructions for the “**Reserve now**” option.
 
 <https://techzone.ibm.com/collection/libery-getting-started-labs> 
 
@@ -54,7 +52,7 @@ The lab environment contains one (1) Linux VM, named Workstation.
       <kbd>![](./images/media/vnc-connect.png)</kbd>
 
 
-    e. Enter the password as:  **`passw0rd`**. Then click the **`Send Credentials`** button to access the lab environment. 
+    e. Enter the password as:  **`IBMDem0s!`**. Then click the **`Send Credentials`** button to access the lab environment. 
 
     > Note: That is a numeric zero in passw0rd  
 
