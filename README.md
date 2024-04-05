@@ -190,6 +190,12 @@ In the environment, the default background for terminal windows and Visual Studi
 
 ## 5.1 Liberty Administration
 
+A Liberty instance is installed and can be used to demo Liberty capabilities like
+- Dynamic Updates (use the provided configuration snippets for AdminCenter or LogLevel for demonstration)
+- Portable Configuration (open the server.xml file to explain concepts like includes and variables)
+- AdminCenter
+- REST APIs
+
 1. Open a terminal window and navigate to the directory ~/demos/TA
 
         cd ~/demos/Liberty
@@ -261,6 +267,44 @@ In the environment, the default background for terminal windows and Visual Studi
 
 5. To get an idea what you can demo in the AdminCenter, take a look at the lab https://github.com/LarsBesselmann/LibertyGettingStarted-Lab
 
+## 5.1.3 Demonstrate Zero Migration and FeatureInstall
+
+1. Stop Liberty if running
+
+        ~/demos/Liberty/wlp/bin/server stop myServer
+
+2. List Liberty servers
+
+        ~/demos/Liberty/wlp/bin/server list
+
+3. Start Liberty and take a look at the output - it should show Liberty 24.0.0.1
+
+        ~/demos/Liberty/wlp/bin/server run myServer
+
+4. Stop the server by pressing **CTRL+C**
+
+5. Download a new version via the following command:
+
+        wget https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/24.0.0.3/wlp-kernel-24.0.0.3.zip -P ~/Downloads
+
+6. Extract the Liberty archive into a new directory called work
+
+        mkdir ~/work
+        unzip ~/Downloads/wlp-kernel-24.0.0.3.zip -d ~/work
+
+7. Set in the environment the WLP User directory
+
+        export WLP_USER_DIR=/home/techzone/demos/Liberty/wlp_usr
+
+8. Install missing features
+ 
+        ~/work/wlp/bin/featureUtility installServerFeatures myServer
+
+9. Start Liberty and take a look at the logs
+
+        ~/work/wlp/bin/server run myServer
+
+10. Stop the server by pressing **CTRL+C**
 
 ## 5.2 Liberty Tools
 
