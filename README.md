@@ -1,106 +1,28 @@
-# Liberty Getting Started
+# Liberty Getting Started Demos
 
-## data collection, assessments, & deployment accelerators
+Work in progress
 
 ![banner](./images/media/OpenLiberty.png) 
 
 **Last updated:** March 2024
 
-**Duration:** 90 minutes
+**Duration:** Depens on what you want to demo
 
-Need support? Contact **Lars Besselmann, Kevin Postreich**
-
-
-## Liberty Getting Started tasks
-
-**Liberty** is a lightweight open framework for building fast and efficient cloud-native Java microservices. Build cloud-native apps and microservices while running only what you need. It is the most flexible server runtime available to Java developers in this solar system.
-
-* Open Liberty is designed with both developers and application business owners in mind.
-    * It delivers the latest Java APIs and integrates with the most popular Developer and Build tools.
-    * It has built-in innovation like zero-migration to reduce application runtime costs and delivery effort.
-    * WebSphere Liberty is downstream of Open Liberty so anything that works on Open Liberty works on WebSphere Liberty.
-    * Same Monthly Continuous Delivery Release Cycle as WebSphere Liberty
-    * You do not need to switch to WebSphere Liberty for commercial support
-
-
-**Liberty Tools** is a set of intuitive developer tools for the Eclipse IDE, Visual Studio Code, and IntelliJ IDEA development environments. These tools adopt a Maven/Gradle-centric approach and enable fast, iterative cloud-native Java application development through Liberty dev mode.
-Liberty Tools also provides helpful, time-saving features such as code completion, hover descriptions, and configuration diagnostics for Jakarta EE APIs, MicroProfile APIs, and Liberty configuration. For more information, check out the Liberty Tools overview.
-
+Need support? Contact **Lars Besselmann**
 
 ## 1. Introduction
 
-In the lab, there will be different roles involved with perform different tasks using different tools. You will perform all the different roles during the lab. 
+In the document, you will find some hints how to use the asset for customer demos in the area of 
 
-* You will start as an application developer and use Liberty starter and the code assistant to develop a simple web application. But don't worry, you do not have to be a developer to do this.
+* Liberty 
+    * Liberty Tools with configuration and code assistant
+    * Liberty AdminCenter
+* Transformation Advisor
+    * Basic analysis
+    * Common Code
+* Mono2Micro
 
-* As Liberty configuration developer, You will use the configuration assistant and concepts like includes and variables to create a portable configuration. 
-
-* As Liberty administrator, you will install Liberty from a kernel image, add missing features, configure loging, security and so on, will use the Liberty REST APIs to review the configuration and use Liberty Admin Center for monitoring.
-
-## 2. Objective
-
-These are the objectives in the lab:
-
-* As application developer:
-    * Tasks: 
-        * Develops the application.
-        * Creates a basic Liberty configuration for the application
-    * Tools:
-        * Apache Maven 
-            * to build the project 
-            * to download the Open Liberty server runtime from the maven repository
-        * Liberty Maven Plugin for inner-loop development via Liberty Dev Mode
-            * to build the application war and deploy it to Liberty
-        * Visual Studio Code 
-            * as IDE to build the application code
-        * Liberty Tools plugin for Visual Studio Code
-            * provides a Liberty dashboard with Dev Mode integration in the IDE
-            * provides Jakarta EE and MicroProfile code assistance
-            * provides Liberty configuration assistance
-        * Liberty Starter Project 
-            * to generate a maven project for Liberty 
-        * Open Liberty / WebSphere Liberty
-            * as runtime for the Java application that will be developed
-            * to create a server package
-
-* As Liberty configuration developer:
-    * Tasks: 
-        * Develop portable Liberty configuration snippets using includes, variables and much more.
-    * Tools:
-        * Visual Studio Code with Liberty Tools plugin as editor with configuration assistance
-
-* As Liberty administrator:
-    * Tasks: 
-        * Installs Liberty
-        * Configures Liberty for the target application using Liberty configuration snippets
-        * Applies security to harden the Liberty configuration
-        * Configure logging using configDropins
-        * Review the configuration using LIberty REST APIs
-        * Monitor Liberty using the Admin Center
-    * Tools:
-        * Liberty server command to create a Liberty instance and start, stop or dump it
-        * Liberty installUtility to install missing features
-        * Liberty securityUtility to create a keystore or encode a password
-        * Liberty REST APIs and Admin Center
-
-<br>
-
-
-## 3. Prerequisites
-
-The following prerequisites must be completed prior to beginning this
-lab:
-
-  - Familiarity with basic Linux commands
-
-  - Have internet access
-
-  - Have a lab environment ready
-
-
-<br/>
-
-## 4. Accessing the environment
+## 2. Accessing the environment
 
 If you are doing this lab as part of an instructor led workshop (virtual or face to face), an environment has already been provisioned for you. The instructor will provide the details for accessing the lab environment.
 
@@ -157,7 +79,7 @@ The lab environment contains one (1) Linux VM, named Workstation.
 	 
 	 <br>
 
-## 5. Tips for working in the lab environment     
+## 3. Tips for working in the lab environment     
 
 1. You can resize the viewable area using the **noVNC Settings** options to resize the virtual desktop to fit your screen.
 
@@ -246,48 +168,14 @@ In the environment, the default background for terminal windows and Visual Studi
 <br>    
 
 
-## 6. Execute Lab Tasks
+## 4. Installed software
 
-### 6.1 Verify the installed software 
-
-Open a terminal by clicking on Activities and selecting terminal.
-
-<kbd>![Toolbar_terminal](./images/media/Toolbar_terminal.png)</kbd>
-
-The terminal window opens.
-
-<kbd>![Terminal](./images/media/Terminal.png)</kbd>
-
-Check the Maven version via the following command:
-
-    mvn -version
-
-
-<kbd>![mvn-v](./images/media/mvn-v.png)</kbd>
-
-
-Check the Docker version via the following command:
-
-    docker -v
-
-<kbd>![docker-v](./images/media/docker-v.png)</kbd>
-
-
-Check the Git version via the following command:
-
-    git -v
-
-<kbd>![git-v](./images/media/git-v.png)</kbd>
-
-### 6.2 Create the required working directories
-
-Create the Student directories and some sub-directories used in the lab:
-
-    mkdir ~/Student
-    mkdir ~/Student/dev
-    mkdir ~/Student/ops
-    mkdir ~/Student/assets
-
+* maven 3.5.3
+* docker 24.0.7
+* git 2.39.3
+* Liberty 24.0.0.x
+* Transformation Advisor
+* Mono2Micro
 
 ### 6.3 Develop a Liberty web application
 
