@@ -198,7 +198,7 @@ In the environment, the default background for terminal windows and Visual Studi
 
     - directories
         - wlp - WebSphere Liberty 24.0.0.1 ILAN binaries
-        - wlp_usr - WLP server diretory with server myServer
+        - wlp_usr - WLP user directory with server myServer
     - configuration files
         - adminCenter-config.xml - configuration file to enable the adminCenter
         - rest-config.xml - configuration file to enable the REST APIs
