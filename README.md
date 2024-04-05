@@ -282,20 +282,24 @@ In the environment, the default background for terminal windows and Visual Studi
 
 5. Now you have different toptions:
 
-    - Navigate to the server.xml to demonstrate Liberty Configuration Assistant
+    - Use the **Liberty Configuration Assistant**
 
-        <kbd>![VSCode-simpleweb-server-xml](./images/media/VSCode-simpleweb-server-xml.png)</kbd>
+        1. Navigate to the server.xml
+
+            <kbd>![VSCode-simpleweb-server-xml](./images/media/VSCode-simpleweb-server-xml.png)</kbd>
     
-        To get an idea how to use the configuration assistant, take a look at the lab https://github.com/LarsBesselmann/LibertyGettingStarted-Lab
+        2. To get an idea how to use the configuration assistant, take a look at the lab https://github.com/LarsBesselmann/LibertyGettingStarted-Lab
 
-    - Create a new file called helloWorldServlet.java and use the code assistant to create a new servlet
+    - Use the **Liberty code assistant for Jakarte EE** to create a new servlet
 
-        <kbd>![VSCode-simpleweb-helloWorld](./images/media/VSCode-simpleweb-helloWorld.png)</kbd>
-        <kbd>![VSCode-simpleweb-helloWorld2](./images/media/VSCode-simpleweb-helloWorld2.png)</kbd>
+        1. Create a new file called helloWorldServlet.java.
 
-        To get an idea how to use the code assistant, take a look at the lab https://github.com/LarsBesselmann/LibertyGettingStarted-Lab
+            <kbd>![VSCode-simpleweb-helloWorld](./images/media/VSCode-simpleweb-helloWorld.png)</kbd>
+            <kbd>![VSCode-simpleweb-helloWorld2](./images/media/VSCode-simpleweb-helloWorld2.png)</kbd>
 
-    - Create a simple health policy
+        2. To get an idea how to use the code assistant, take a look at the lab https://github.com/LarsBesselmann/LibertyGettingStarted-Lab
+
+    - Use the **Liberty code assistant for MicroProfile** to create a simple health policy
         1. Open a browser and check the already available health policies via URL localhost:9080/health
 
             <kbd>![VSCode-simpleweb-health1](./images/media/VSCode-simpleweb-health1.png)</kbd>
