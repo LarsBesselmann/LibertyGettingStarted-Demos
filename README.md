@@ -195,6 +195,7 @@ A Liberty instance is installed and can be used to demo Liberty capabilities lik
 - Portable Configuration (open the server.xml file to explain concepts like includes and variables)
 - AdminCenter
 - REST APIs
+- Zero Migration and Feature Installation
 
 1. Open a terminal window and navigate to the directory ~/demos/TA
 
