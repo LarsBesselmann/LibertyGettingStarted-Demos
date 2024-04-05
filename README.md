@@ -282,7 +282,7 @@ In the environment, the default background for terminal windows and Visual Studi
 
 5. Now you have different toptions:
 
-    - Use the **Liberty Configuration Assistant**
+    - Use the **Liberty Tools Configuration Assistant**
 
         1. Navigate to the server.xml
 
@@ -290,7 +290,7 @@ In the environment, the default background for terminal windows and Visual Studi
     
         2. To get an idea how to use the configuration assistant, take a look at the lab https://github.com/LarsBesselmann/LibertyGettingStarted-Lab
 
-    - Use the **Liberty code assistant for Jakarte EE** to create a new servlet
+    - Use the **Liberty Tools Code Assistant for Jakarte EE** to create a new servlet
 
         1. Create a new file called helloWorldServlet.java.
 
@@ -299,7 +299,7 @@ In the environment, the default background for terminal windows and Visual Studi
 
         2. To get an idea how to use the code assistant, take a look at the lab https://github.com/LarsBesselmann/LibertyGettingStarted-Lab
 
-    - Use the **Liberty code assistant for MicroProfile** to create a simple health policy
+    - Use the **Liberty Tools Code Assistant for MicroProfile** to create a simple health policy
         1. Open a browser and check the already available health policies via URL localhost:9080/health
 
             <kbd>![VSCode-simpleweb-health1](./images/media/VSCode-simpleweb-health1.png)</kbd>
