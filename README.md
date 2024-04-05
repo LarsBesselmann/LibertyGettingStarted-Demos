@@ -197,11 +197,8 @@ A Liberty instance is installed and can be used to demo Liberty capabilities lik
 - REST APIs
 - Zero Migration and Feature Installation
 
-1. Open a terminal window and navigate to the directory ~/demos/TA
 
-        cd ~/demos/Liberty
-
-2. In the directory, you will find several files and directories
+2. In the directory ~/demos/Liberty, you will find several files and directories
 
     - directories
         - wlp - WebSphere Liberty 24.0.0.1 ILAN binaries
