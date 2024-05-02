@@ -399,7 +399,7 @@ As best practice to optimize the footprint of the application runtime regarding 
 
 1. In the Visual Studio Code editor for **server.xml**, scroll up to the feature section.
 
-2. Delete the lines **\<feature>jakartaee-10.0\</feature>** and **\< feature>MicroProfile-6.1\</feature>**.
+2. Delete the line **\<feature>jakartaee-10.0\</feature>**.
     Your **featureManager** section should now look like this:
 
     <kbd>![image031](./images/media/image031.png)</kbd>
@@ -557,20 +557,27 @@ Use the **Liberty Tools Code Assistant for MicroProfile** to create a simple hea
     <kbd>![VSCode-simpleweb-health1](./images/media/VSCode-simpleweb-health1.png)</kbd>
 
 2. Create a file called myHealth.java
+    a. In Visual Studio Code, expand the path to **src/main/java/com/demo**, then right-click on demo and select New File.
+    
+    <kbd>![VSCode-simpleweb-health2a](./images/media/VSCode-simpleweb-health2a.png)</kbd>
 
-    <kbd>![VSCode-simpleweb-health2](./images/media/VSCode-simpleweb-health2.png)</kbd>
+    b. Enter the name **myHealth.java** and press **ENTER**.
 
-3. Delete the generated content in the file, then type **mp**. The code assistant will offer to craeet a microProfile health policy.
+    <kbd>![VSCode-simpleweb-health2b](./images/media/VSCode-simpleweb-health2b.png)</kbd>
+
+3. Delete the generated content in the file, then type **mp**. The code assistant will offer to create a microProfile health policy.
 
     <kbd>![VSCode-simpleweb-health3](./images/media/VSCode-simpleweb-health3.png)</kbd>
 
 4. Select **mpreadiness** and the code gets generated. As you are running Liberty in Dev Mode, the code will get compiled and deployed.
 
-5. Go back to the browser and click reload on the URL localhost:9080/health. You should see the new policy.
-
     <kbd>![VSCode-simpleweb-health4](./images/media/VSCode-simpleweb-health4.png)</kbd>
 
+5. Go back to the browser and click reload on the URL localhost:9080/health. You should see the new policy.
 
+    <kbd>![VSCode-simpleweb-health4](./images/media/VSCode-simpleweb-health5.png)</kbd>
+
+Feel free to adjust the code of the health policy to get a flexible status.
 
 
 ## 5.3 IBM Transformation Advisor
