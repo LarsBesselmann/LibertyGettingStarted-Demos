@@ -28,10 +28,14 @@ In the document, you will find some hints how to use the asset for customer demo
 * **Mono2Micro**
 
 Shortcut to the demo guides:
-* Liberty Administration: https://github.com/LarsBesselmann/LibertyGettingStarted-Demos/tree/main?tab=readme-ov-file#51-liberty-administration
-* Liberty Development: https://github.com/LarsBesselmann/LibertyGettingStarted-Demos/tree/main?tab=readme-ov-file#52-liberty-tools 
-* IBM Transformation Advisor: https://github.com/LarsBesselmann/LibertyGettingStarted-Demos/tree/main?tab=readme-ov-file#53-ibm-transformation-advisor
-* IBM Mono2Micro: https://github.com/LarsBesselmann/LibertyGettingStarted-Demos/tree/main?tab=readme-ov-file#54-ibm-mono2micro 
+* Liberty Administration: <br>
+    https://github.com/LarsBesselmann/LibertyGettingStarted-Demos/tree/main?tab=readme-ov-file#51-liberty-administration
+* Liberty Development: <br>
+    https://github.com/LarsBesselmann/LibertyGettingStarted-Demos/tree/main?tab=readme-ov-file#52-liberty-tools 
+* IBM Transformation Advisor: <br>
+    https://github.com/LarsBesselmann/LibertyGettingStarted-Demos/tree/main?tab=readme-ov-file#53-ibm-transformation-advisor
+* IBM Mono2Micro: <br>
+    https://github.com/LarsBesselmann/LibertyGettingStarted-Demos/tree/main?tab=readme-ov-file#54-ibm-mono2micro 
 
 
 ## 2. Accessing the environment
