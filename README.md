@@ -12,7 +12,7 @@ Need support? Contact **Lars Besselmann**
 
 ## 1. Introduction
 
-In the document, you will find some hints how to use the asset for customer demos in the area of 
+In the document, you will find some hints how to use the asset for customer demos around 
 
 * **Liberty Administration:**
     * Liberty AdminCenter
@@ -22,10 +22,10 @@ In the document, you will find some hints how to use the asset for customer demo
     * Liberty Starter Project
     * Liberty Tools Dev Mode
     * Liberty Tools configuration and code assistant to create a servlet or MicroProfile Health policy
-* **Transformation Advisor:**
+* **IBM Transformation Advisor:**
     * Basic analysis
     * Common Code
-* **Mono2Micro**
+* **IBM Mono2Micro**
 
 Shortcut to the demo guides:
 * Liberty Administration: <br>
