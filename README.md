@@ -254,6 +254,10 @@ A Liberty instance is installed and can be used to demo Liberty capabilities lik
 
 ## 5.2 Liberty Tools
 
+**Liberty Tools** is a set of intuitive developer tools for the Eclipse IDE, Visual Studio Code, and IntelliJ IDEA development environments. These tools adopt a Maven/Gradle-centric approach and enable fast, iterative cloud-native Java application development through Liberty dev mode.
+Liberty Tools also provides helpful, time-saving features such as code completion, hover descriptions, and configuration diagnostics for Jakarta EE APIs, MicroProfile APIs, and Liberty configuration. For more information, check out the Liberty Tools overview.
+The Liberty tools have been instaled as plugin into Visual Studio Code.
+
 ## 5.2.1 Create a Liberty starter application.
 
 The objective of this section is to develop a simple web application for Liberty. You will use a **Liberty starter application** to now start from scratch and use Visual Studio Code and Liberty Tools to build the application.
