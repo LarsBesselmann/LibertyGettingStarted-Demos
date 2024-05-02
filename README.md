@@ -120,58 +120,6 @@ The lab environment contains one (1) Linux VM, named Workstation.
     <kbd>![Toolbar](./images/media/Toolbar.png)</kbd>
     
 
-
-5. How to change the background color 
-In the environment, the default background for terminal windows and Visual Studio Code is dark. For the lab documentation, we changed the color to light. Feel free to keep the background in light but if you want to change it to dark, here the explanation how it was changed.
-
-    1. How to change the terminal background to white
-        Right-click into the terminal background, then select Preferences.
-
-        <kbd>![Terminal-change-background1](./images/media/Terminal-change-background1.png)</kbd>
-
-        A Preferences window opens. Click on Colors, then uncheck the box for  Use colors from system theme . (If you want to get back to dark, check the box again).
-
-        <kbd>![Terminal-change-background2](./images/media/Terminal-change-background2.png)</kbd>
-
-        The terminal background should switch to white.
-
-        <kbd>![Terminal-change-background3](./images/media/Terminal-change-background3.png)</kbd>
-
-        Close the Preferences window.
-
-
-
-    2. How to switch the background of Visual Studio Code from dark to light
-
-        In a terminal Window, run the following command to start Visual Studio Code
-
-            mkdir ~/temp
-            code ~/temp
-
-        <kbd>![start-VSCode](./images/media/start-VSCode.png)</kbd>
-
-        Visual Studio Code opens with a dark background. 
-        Click on  Yes, I trust the authors 
-
-        <kbd>![VSCode-trust](./images/media/VSCode-trust.png)</kbd>
-
-        Then select Preferences > Theme > Color Theme
-
-        <kbd>![VSCode-Theme](./images/media/VSCode-Theme.png)</kbd>
-
-        Select Light
-
-        <kbd>![VSCode-Theme-light](./images/media/VSCode-Theme-light.png)</kbd>
-
-        The tool will change to a light background, see below.
-
-        <kbd>![VSCode-light](./images/media/VSCode-light.png)</kbd>
-
-        Close Visual Studio Code.
-
-<br>    
-
-
 ## 4. Installed software
 
 * Installed software
@@ -306,63 +254,316 @@ A Liberty instance is installed and can be used to demo Liberty capabilities lik
 
 ## 5.2 Liberty Tools
 
-1. Open a terminal window and unzip the starter project from the backup directory
-        
-        mkdir ~/demos/simpleweb
-        unzip backup/Liberty-Getting-Started/simpleweb.zip -d ~/demos/simpleweb
-        cd ~/demos/simpleweb
-        
-2. Start Visual Studio Code by executing in the terminal the following command
+## 5.2.1 Create a Liberty starter application.
 
+The objective of this section is to develop a simple web application for Liberty. You will use a **Liberty starter application** to now start from scratch and use Visual Studio Code and Liberty Tools to build the application.
+
+In this scenario, you want to create a Jakarta EE 10 Web application with the name **simpleweb** and will use maven to build it. The fastest way to get started is to use an Open Liberty starter application which generates a project with the maven configuration as well as a basic Liberty setup.
+
+<kbd>![LibertyStarter](./images/media/LibertyStarter.png)</kbd>
+
+The **Open Liberty starter** gives you a simple, quick way to get the necessary files to start building an application on Open Liberty. There is no need to search how to find out what to add to your maven or gradle build files. A simple **RestApplication.java** file is generated for you to start creating a REST based application. A **server.xml** configuration file is provided with the necessary features for the MicroProfile and Jakarta EE versions that you previously selected. 
+
+
+1. Open a browser window by clicking on **Activities** and then select the **Firefox** browser icon.
+
+    <kbd>![Toolbar_firefox](./images/media/Toolbar_firefox.png)</kbd>
+
+    If you get a pop-up that Authentication is required, enter **IBMDem0s!**. 
+
+    <kbd>![Authentication-required](./images/media/Authentication-required.png)</kbd>
+
+2. Enter the URL **https://openliberty.io/start/**   
+<table>
+<tbody>
+<tr class="odd">
+<td><kbd><img src="./images/media/info.png" alt="sign-info" /></kbd></td>
+<td>
+<p>If the page does not open, close the browser and open it again.
+</p></td>
+</tr>
+</tbody>
+</table>
+
+3. Change the artifact name to **simpleweb**, change the Java level to **17** and leave the rest as is, then click on **Generate project** 
+
+    <kbd>![LibertyStarter-simpleweb](./images/media/LibertyStarter-simpleweb.png)</kbd>
+
+4. Click on **Save** to save the project under Downloads.
+
+    <kbd>![LibertyStarter-simpleweb-save](./images/media/LibertyStarter-simpleweb-save.png)</kbd>
+
+    You will see a pop-up like the one below. Click on **Got it!**  to close the window.
+
+    <kbd>![LibertyStarter-simpleweb-save2](./images/media/LibertyStarter-simpleweb-save2.png)</kbd>
+
+5. Extract the file.
+
+    a. Click on **Activities** and switch to the terminal window. 
+    
+    b. Create a directory for the starter project via command:
+
+        mkdir ~/demos/simpleweb
+        
+    c. Extract the starter project via command:
+
+        unzip ~/Downloads/simpleweb.zip -d ~/demos/simpleweb
+
+
+    <table>
+    <tbody>
+    <tr class="odd">
+    <td><kbd><img src="./images/media/info.png" alt="sign-info" /></kbd></td>
+    <td>
+    <p>If you want to use the pre-loaded starter project instead, use the following command instead.
+    </p>         unzip ~/backup/Liberty-Getting-Started/simpleweb.zip -d ~/demos/simpleweb
+    </td>
+    </tr>
+    </tbody>
+    </table>
+
+
+## 5.2.2 Inspect the starter project using Open Visual Studio Code
+
+Now you will use Visual Studio Code to see what has been generated as part of the starter project.
+
+1. From the terminal window, start Visual Studio Code
+
+        cd ~/demos/simpleweb
         code .
 
-3. If asked, trust the author and ignore/close all pop-ups telling to install updates and so on.
+    Visual Studio Code UI will be opened.
 
-4. Use the Liberty Dashboard to start Liberty in Dev Mode
+2. Click on **Yes, I trust the authors** to continue.
 
-    <kbd>![VSCode-simpleweb-wlpstart](./images/media/VSCode-simpleweb-wlpstart.png)</kbd>
+    <kbd>![image023](./images/media/image023.png)</kbd>
 
-5. Now you have different toptions:
+    If you see during the demo one of the pop-ups below or any other pop-up asking to install something, close the pop-up without installation by clicking the X.
+    <kbd>![image024](./images/media/image024.png)</kbd>
+    <kbd>![image025](./images/media/image025.png)</kbd>
 
-    - Use the **Liberty Tools Configuration Assistant**
 
-        1. Navigate to the server.xml
+3. Investigate into the generated project:
 
-            <kbd>![VSCode-simpleweb-server-xml](./images/media/VSCode-simpleweb-server-xml.png)</kbd>
+    In Visual Studio Code, take a look at the **Explorer** section to see the content of the project.
+    You can find a src and a target folder, a Dockerfile and a maven build file (pom.xml).
+
+    <kbd>![image026](./images/media/image026.png)</kbd>
+
+
+4. Take a look at the generated Maven configuration 
+
+    a. Click on **pom.xml** to see the maven pom.
     
-        2. To get an idea how to use the configuration assistant, take a look at the lab https://github.com/LarsBesselmann/LibertyGettingStarted-Lab
+    In the build section, you can find the configuration of the liberty-maven-plugin.
 
-    - Use the **Liberty Tools Code Assistant for Jakarte EE** to create a new servlet
+    <kbd>![image027](./images/media/image027.png)</kbd>
+<table>
+<tbody>
+<tr class="odd">
+<td><kbd><img src="./images/media/info.png" alt="sign-info" /></kbd></td>
+<td>
+<p>Don’t worry if the version of the plugin has changed to 3.10.2 or later.
+</p></td>
+</tr>
+</tbody>
+</table>
 
-        1. Create a new file called helloWorldServlet.java.
+    b. Finally close the pom.xml.
 
-            <kbd>![VSCode-simpleweb-helloWorld](./images/media/VSCode-simpleweb-helloWorld.png)</kbd>
-            <kbd>![VSCode-simpleweb-helloWorld2](./images/media/VSCode-simpleweb-helloWorld2.png)</kbd>
+5. Review the generated Liberty configuration
 
-        2. To get an idea how to use the code assistant, take a look at the lab https://github.com/LarsBesselmann/LibertyGettingStarted-Lab
+    a.  Open **src >  main >liberty > config > server.xml** to see the Liberty configuration.
 
-    - Use the **Liberty Tools Code Assistant for MicroProfile** to create a simple health policy
-        1. Open a browser and check the already available health policies via URL localhost:9080/health
+    <kbd>![image028](./images/media/image028.png)</kbd>
 
-            <kbd>![VSCode-simpleweb-health1](./images/media/VSCode-simpleweb-health1.png)</kbd>
+    As you can see, the features for **jakartaee-10** and **MicroProfile-6.1** have been configured.
 
-        2. Create a file called myHealth.java
+    <kbd>![image029](./images/media/image029.png)</kbd>
 
-            <kbd>![VSCode-simpleweb-health2](./images/media/VSCode-simpleweb-health2.png)</kbd>
+    b. Scroll down and you can see that the http endpoint and the web application have been configured.
 
-        3. Delete the generated content in the file, then type **mp**. The code assistant will offer to craeet a microProfile health policy.
-
-            <kbd>![VSCode-simpleweb-health3](./images/media/VSCode-simpleweb-health3.png)</kbd>
-
-        4. Select microprofilereadiness and the code gets generated. As you are running Liberty in Dev Mode, the code will get compiled and deployed.
-
-        5. Go back to the browser and click reload on the URL localhost:9080/health. You should see the new policy.
-
-            <kbd>![VSCode-simpleweb-health4](./images/media/VSCode-simpleweb-health4.png)</kbd>
-
-    - To get an idea what else to demo, take a look at the lab https://github.com/LarsBesselmann/LibertyGettingStarted-Lab
+    <kbd>![image030](./images/media/image030.png)</kbd>
 
 
+### 5.2.3 Adjust the Liberty configuration
+
+The **simpleweb** application will not require the full **Jakarta EE 10** standard but only the servlet specification.
+
+As best practice to optimize the footprint of the application runtime regarding memory and disk space and limit the number of potential vulnerabilities, you should define only the features that are required by the application. In this case, you are ging to replace the **jakartaee-10** feature with an appropriate servlet feature. 
+
+1. In the Visual Studio Code editor for **server.xml**, scroll up to the feature section.
+
+2. Delete the lines **\<feature>jakartaee-10.0\</feature>** and **\< feature>MicroProfile-6.1\</feature>**.
+    Your **featureManager** section should now look like this:
+
+    <kbd>![image031](./images/media/image031.png)</kbd>
+
+3. Now you will use the **Liberty Tools configuration assistant** to define the servlet feature. Place your cursor at the beginning of an empty line in the featureManager section. Then press the **CTRL key** and press **SPACE** to activate the Liberty Tools configuration assistant. You should see something like:
+
+    <kbd>![image032](./images/media/image032.png)</kbd>
+<table>
+<tbody>
+<tr class="odd">
+<td><kbd><img src="./images/media/info.png" alt="sign-info" /></kbd></td>
+<td>
+<p>You might have to click on the arrow right to feature to get the description.
+</p></td>
+</tr>
+</tbody>
+</table>
+
+4. Select **feature** and the feature element gets added.
+
+    <kbd>![image033](./images/media/image033.png)</kbd>
+
+5. Use again **CTRL+SPACE** to get the list of available features.
+
+    <kbd>![image034](./images/media/image034.png)</kbd>
+
+6. Type the word **servlet** to see the available servlet features.
+
+    <kbd>![image035](./images/media/image035.png)</kbd>
+
+7. Use the arrow-down key to get the description for **servlet-6.0**.
+
+    <kbd>![image036](./images/media/image036.png)</kbd>
+
+8. Select the feature **servlet-6.0** and your configuration should now look like this:
+
+    <kbd>![image037](./images/media/image037.png)</kbd>
+
+10. Save the configuration by using **CTRL+S**.
+
+11. Close the **server.xml** file.
+
+
+## 5.2.4 Demo using Liberty Dev Mode
+
+Liberty development mode, or dev mode, allows you to develop applications with any text editor or IDE by providing hot reload and deployment, on demand testing, and debugger support. Liberty Dev Mode is enabled through Maven and Gradle projects.
+
+Your code is automatically compiled and deployed to your running server, making it easy to iterate on your changes.
+
+You can run tests on demand or even automatically so that you can get immediate feedback on your changes. You can also attach a debugger at any time to debug your running application.
+
+<kbd>![LibertyDevMode](./images/media/LibertyDevMode.png)</kbd>
+
+<table>
+<tbody>
+<tr class="odd">
+<td><kbd><img src="./images/media/info.png" alt="sign-info" /></kbd></td>
+<td>
+<p>You can use the capabilities of Liberty dev mode inside and outside of an IDE. This provides you the flexibility of choice, so you can decide which IDE to use. <br>
+In a terminal window, you would use Liberty in dev mode with maven using the command <strong>mvn liberty:dev</strong> (or <strong>mvn liberty:devc</strong> if you want to develop in a container).  <br> For gradle, the related commands are <strong>gradle libertyDev</strong> and <strong>gradle libertyDevc</strong>.
+</p></td>
+</tr>
+</tbody>
+</table>
+
+In the lab environment, the Liberty tools plugin has been installed into Visual Studio Code. Therefore you will use the integrated Liberty dashboard which will execute under the cover the related maven commands. 
+
+1. In Visual Studio Code, expand the Liberty Dashboard.
+
+    <kbd>![image040](./images/media/image040.png)</kbd>
+
+2. Right-click on **simpleweb** and then **start** to start the server in dev mode.
+
+    <kbd>![image041](./images/media/image041.png)</kbd>
+
+3. A terminal opens within Visual Studio Code and you can see that the start of the build process gets triggered.
+
+    <kbd>![image042](./images/media/image042.png)</kbd>
+
+4. The Liberty plugin as well as the Liberty server artifacts get downloaded, then the server is ready for testing.
+
+    <kbd>![image043](./images/media/image043.png)</kbd>
+
+5. Switch to the browser window and enter the URL **localhost:9080**. You should see something like this:
+
+    <kbd>![image044](./images/media/image044.png)</kbd>
+<table>
+<tbody>
+<tr class="odd">
+<td><kbd><img src="./images/media/info.png" alt="sign-info" /></kbd></td>
+<td>
+<p>If you get a pop-up with <strong>Authentication required</strong>, enter the password <strong>IBMDem0s!</strong> and click on <strong>Unlock</strong>.
+</p></td>
+</tr>
+</tbody>
+</table>
+
+Now, let’s create a simple web application.
+
+## 5.2.4 Add a servlet to the simpleweb application
+
+Now you will edit the **simpleweb** application and add a servlet. Thanks to Liberty Tools code assistant, you don't have to write the code on your own. 
+
+1. Switch to Visual Studio Code.
+
+2. In Visual Studio Code, expand the path to **src/main/java/com/demo/rest**, then **right-click** on **demo** and select **New File**.
+
+    <kbd>![image045](./images/media/image045.png)</kbd>
+
+3. Enter the name **helloWorldServlet.java** and press **ENTER**.
+
+    <kbd>![image046](./images/media/image046.png)</kbd>
+
+4. The file **src/main/java/com/demo/helloWorldServlet.java** is generated and opens in an editor.
+
+    <kbd>![image047](./images/media/image047.png)</kbd>
+
+5. Remove all code from the file. Then enter **servlet** and press **CTRL+SPACE**.
+
+    <kbd>![image048](./images/media/image048.png)</kbd>
+
+6. The code assistant offers some servlet methods for Jakarta EE. Select **servlet_doget**, and the required starter code gets generated.
+    As you can see, the fields that should be changed are highlighted.
+
+    <kbd>![image049](./images/media/image049.png)</kbd>
+
+7. Change the **servletName** to **helloWorldServlet** and the **urlPatters** to **/helloWorld**. The code should now look like this:
+
+    <kbd>![image050](./images/media/image050.png)</kbd>
+
+8. Press **CTRL+S** to save the code change. Take a look at the terminal output. As Liberty has been started in DevMode, the code changes are picked up automatically, the source gets compiled and Liberty gets updated.
+
+    <kbd>![image051](./images/media/image051.png)</kbd>
+
+9. Switch to the browser and open the URL **localhost:9080/simpleweb/helloWorld**. You should see the output of the created servlet.
+
+    <kbd>![image052](./images/media/image052.png)</kbd>
+
+10. Switch back to Visual Studio Code and change the source code of the servlet response text to something like this: **helloWorld - Example HTTP GET request for HTTPServlet**
+
+    <kbd>![image053](./images/media/image053.png)</kbd>
+
+11. Save the changes and reload the page in the browser. The output should be updated.
+
+    <kbd>![image054](./images/media/image054.png)</kbd>
+
+12. Switch back to Visual Studio Code and close the editor for the file **helloWorldServlet.java**.
+
+
+## 5.2.5 Add a MicroProfile Health policy to the simpleweb application
+
+Use the **Liberty Tools Code Assistant for MicroProfile** to create a simple health policy
+1. Open a browser and check the already available health policies via URL localhost:9080/health
+
+    <kbd>![VSCode-simpleweb-health1](./images/media/VSCode-simpleweb-health1.png)</kbd>
+
+2. Create a file called myHealth.java
+
+    <kbd>![VSCode-simpleweb-health2](./images/media/VSCode-simpleweb-health2.png)</kbd>
+
+3. Delete the generated content in the file, then type **mp**. The code assistant will offer to craeet a microProfile health policy.
+
+    <kbd>![VSCode-simpleweb-health3](./images/media/VSCode-simpleweb-health3.png)</kbd>
+
+4. Select **mpreadiness** and the code gets generated. As you are running Liberty in Dev Mode, the code will get compiled and deployed.
+
+5. Go back to the browser and click reload on the URL localhost:9080/health. You should see the new policy.
+
+    <kbd>![VSCode-simpleweb-health4](./images/media/VSCode-simpleweb-health4.png)</kbd>
 
 
 
@@ -465,3 +666,5 @@ A Liberty instance is installed and can be used to demo Liberty capabilities lik
     - /home/techzone/demos/M2M/DayTrader_2023_V1/final_graph_Lars.json
     
 - To get an idea what to demo, take a look at the lab https://github.com/LarsBesselmann/Liberty-Getting-Started-M2M.
+
+
