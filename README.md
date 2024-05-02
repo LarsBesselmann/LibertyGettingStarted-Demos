@@ -14,18 +14,18 @@ Need support? Contact **Lars Besselmann**
 
 In the document, you will find some hints how to use the asset for customer demos in the area of 
 
-* Liberty Administration:
+* **Liberty Administration:**
     * Liberty AdminCenter
     * REST APIs
     * Liberty Zero Migration and FeatureInstall
-* Liberty Development
+* **Liberty Development:**
     * Liberty Starter Project
     * Liberty Tools Dev Mode
     * Liberty Tools configuration and code assistant to create a servlet or MicroProfile Health policy
-* Transformation Advisor
+* **Transformation Advisor:**
     * Basic analysis
     * Common Code
-* Mono2Micro
+* **Mono2Micro**
 
 Shortcut to the demo guides:
 * Liberty Administration: https://github.com/LarsBesselmann/LibertyGettingStarted-Demos/tree/main?tab=readme-ov-file#51-liberty-administration
