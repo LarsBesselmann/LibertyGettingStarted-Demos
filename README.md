@@ -181,6 +181,7 @@ A Liberty instance is installed and can be used to demo Liberty capabilities lik
         wlp/bin/server start myServer
 
 2. Copy the adminCenter configuration into the dropins folder
+
         cp adminCenter-config.xml wlp_usr/servers/myServer/configDropins/overrides/adminCenter-config.xml
 
     <table>
